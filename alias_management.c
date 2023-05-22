@@ -33,9 +33,29 @@ int print_alias(data_of_program *data, char *alias)
 				buffer_add(buffer, data->alias_list[i] + j + 1);
 				buffer_add(buffer, "'\n");
 				_print(buffer);
-			}
+			}OOB
 		}
 	}
 
 	return(0);
+}
+
+
+char *get_alias(data_of_program *data, char *name)
+{
+	int i, alias_length;
+
+	if(name == NULL || data->alias_list == NULL)
+		return (NULL);
+
+	alias_length = str_length(name);
+
+	for (i=0; data->alias_list[i]; i++)
+	{
+		if (str_compare(name, data->alias_list[i], alias_length) && data->alias_list[i][alias_length] == '=') 
+		{
+			return (data->alias_list[i] + alias_length + 1 );
+		}
+	}
+	return (NULL);
 }
