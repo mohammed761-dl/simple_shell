@@ -1,6 +1,6 @@
 
 
-                                                        /*this file is the main file for the project.*/
+                                                        /*this file is the main file for the project "simple_shell" .*/
 
 
 #ifndef SHELL_H
