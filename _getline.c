@@ -1,16 +1,32 @@
 #include "shell.h"
-/* _getline - read one line from the prompt
-   @data: struct for the program's data
-   Return: reading counting bytes */
+
+
+/* aurhors: mohammed cherkaoui & soukaina
+ *
+ *
+ * _getline - read one line from the prompt
+ *
+ *
+ * @data: struct for the program's data
+ *
+ *
+ * Return: reading counting bytes
+ */
+
+
+
 
 int _getline(data_of_program *data)
+
 {
+	
 	char buff[BUFFER_size] = {'\0'};
 	static char *array_commands[10] = {NULL};
 	static char array_operators[10] = {'\0'};
 	ssize_t bytes_read, i = 0;
 
 
+	
 	if (!array_commands[0] || (array_operators[0] == '&' && errno !=0) || (array_operators[0] == '|' && errno==0))
 	{
 		for (i = 0; array_commands[i]; i++)
@@ -36,6 +52,13 @@ int _getline(data_of_program *data)
 		array_operators[i] = array_operators[i + 1]; 
 	}
 }
+
+
+
+
+
+
+
 
 
 int check_logic_ops(char *array_commands[], int i, char array_operators[])
