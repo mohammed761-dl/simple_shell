@@ -42,4 +42,4 @@ in this project we implement a simple unix command interpreter.
 - write (man 2 write)
 
 # Copyright
-Authors : Mohammed CHERKAOUI & Soukaina
+Authors : Mohammed CHERKAOUI & Soukaina ARKOB
